@@ -1,0 +1,10 @@
+<div class="m-3">
+    <h3 [ngClass]="{'strike':!todo.active}">{{todo.title}}</h3>
+    <p [ngClass]="{'strike':!todo.active}">{{todo.desc}}</p>    
+    <div class="mb-3 form-check">
+        <input type="checkbox" [checked]="!todo.active" id="todo{{i}}" class="form-check-input" (click)="markAsDone(todo)">
+        <label class="form-check-label" for="todo{{i}}">Done?</label>
+    </div>
+    <button class="btn btn-danger btn-sm" (click)="deleteTodo(todo)">Delete</button>
+</div>
+<hr>

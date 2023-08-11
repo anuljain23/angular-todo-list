@@ -1,0 +1,16 @@
+<div class="card my-3">
+  <h5 class="card-header">Add New TODO</h5>
+  <div class="card-body m-3">
+    <form (ngSubmit)="addTodoItem()">
+        <div class="mb-3">
+          <label class="form-label">Title</label>
+          <input type="email" [(ngModel)]="title" name="title" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Description</label>
+          <textarea class="form-control" [(ngModel)]="desc" name="desc" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-sm">Add</button>
+      </form>
+  </div>
+</div>
